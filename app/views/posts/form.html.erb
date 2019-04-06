@@ -1,0 +1,12 @@
+
+<%= form_for @post do |f|%>
+<div class="form-group">
+ <label for="post_description">Description</label>
+<%= f.text_field :description %>
+</div>
+<div class="form-group">
+ <label for="post_url">Url</label>
+   <%= f.text_field :url %>
+</div>
+ <%= f.submit %>
+<% end %>

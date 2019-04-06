@@ -1,0 +1,20 @@
+<h1>Estás en index de Post!!</h1>
+
+<% if user_signed_in? %>
+  <%= link_to "Salir", destroy_user_session_path, :method => :delete, class:"btn btn-danger"%>
+<% end %>
+
+<h6> Hola <%= current_user.email %></h6>
+<h5> <%=link_to "crea tu post", new_post_path%></h5>
+
+<h2>Listado de Post</h2>
+<ul>
+  <% @posts.each do |post|%>
+    <li>
+      <p>
+        <%= post.description %>
+      </p>
+      <img src="<%= post.url%>" alt="">
+    </li>
+  <% end %>
+</ul>

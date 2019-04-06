@@ -1,0 +1,7 @@
+<h1>Estás en index de Home!!</h1>
+
+<% if user_signed_in? %>
+  <%= link_to "Salir", destroy_user_session_path, :method => :delete, class:"btn btn-danger"%>
+<% end %>
+
+<h1> Hola <%= current_user.email %></h1>
